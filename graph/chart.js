@@ -46,3 +46,4 @@ function getMax(collection) {
 
     return max
 }
+// max(collection)
