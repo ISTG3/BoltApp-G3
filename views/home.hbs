@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home.css">
+    {{!-- <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/content.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/header.css"> --}}
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div class='wrapper'>
+    {{!-- <div class='wrapper'>
         <div class='header'>
             {{>header}}
         </div>
@@ -22,22 +24,31 @@
         {{!-- <div>
             {{graph}}
         </div> --}}
-        <div class='content' id='content'>
+        {{!-- <div class='content' id='content'>
             
             {{>content}}
-        </div>
+        </div> --}}
         {{!TODO:-- We will add form to get details about runs...someone can work on this on --}}
         {{!-- <div>
             {{>run_form}}
         </div> --}}
 
-        <div class='footer' id='footer'>
+        {{!-- <div class='footer' id='footer'>
             {{>footer}}
         </div>
+        
 
 
 
-    </div>
+    </div> --}}
+ {{!-- --}} 
+{{>header}}
+
+   <section id="home"class="section1">Home</section>
+    <section id="about"class="section2">About</section>
+    <section id="work"class="section3">Work</section>
+    <section id="projects"class="section4">Projects</section>
+    <section id="contact"class="section5 ">Contact</section>
 
 
 
