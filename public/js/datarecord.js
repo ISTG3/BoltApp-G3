@@ -68,7 +68,7 @@ function populateRuns(runs) {
 
         // Append inputs to our form
         form.appendChild(runType)
-        form.appendChild(runType)
+        form.appendChild(runTime)
         form.appendChild(runDate)
         form.appendChild(save)
 

@@ -16,7 +16,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onload="fetchRuns()">
     {{!-- <div class='wrapper'>
         <div class='header'>
             {{>header}}
@@ -49,11 +49,12 @@
    <section id="home"class="section1">Home</section>
     <section id="about"class="section2">About</section>
     <section id="work"class="section3">{{>graph}}</section>
-    <section id="projects"class="section4">Projects</section>
+    <section id="projects"class="section4">{{>datarecord}}</section>
     <section id="contact"class="section5 ">Contact</section>
 
 
 <script src="js/chart.js"></script>
+<script src="js/datarecord.js"></script> 
 
 </body>
 
