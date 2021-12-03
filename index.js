@@ -1,17 +1,18 @@
-import express, { response } from 'express';
-import hbs from 'hbs';
-import fs from 'fs';
-import bodyParser from 'body-parser';
+import express from 'express';
+import bodyParser from 'body-parser'
+import { readFileSync, writeFileSync } from 'fs';
+import hbs from 'hbs'
+
 
 const app = express();
-const port = 7000;
-const jsonParser = bodyParser.json();
+const port = 3000;
+const jsonParser = bodyParser.json()
 const fileName = 'runs.json';
 
 
 
 // Load data from file
-let rawData = fs.readFileSync(fileName);
+let rawData = readFileSync(fileName);
 let data = JSON.parse(rawData);
 console.log("data:", data)
 
@@ -24,19 +25,23 @@ hbs.registerPartials("views/partials"), err => {
         console.log(err);
     }
 }
-app.get('/', (req, res) => res.render('home'))
 
-app.get('/runs', (req, res) => {
+app.get('/', (request, response) => response.render('home'))
+
+app.get('/runs', (request, response) => {
+    console.log('get runs is working just fine...')
     data.sort((a, b) => (a.runDate > b.runDate) ? 1 : -1);
     response.send(data);
 
 });
+
 app.post('/runs', jsonParser, (request, response) => {
+    console.log("Iam posting...")
     data.push(request.body);
-    fs.writeFileSync(fileName, JSON.stringify(data, null, 2));
+    writeFileSync(fileName, JSON.stringify(data, null, 2));
     response.end();
 });
 
 
 
-app.listen(port, () => console.log("I am listening on ", port))
+app.listen(port, () => console.log("I am listening on ", port));
