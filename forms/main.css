@@ -1,0 +1,16 @@
+html,
+body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 100vh;
+    grid-template-rows: auto;
+}
+
+form {
+    grid-column: 3 / 9;
+    margin: 2%;
+}
+
+#atheleterecord {
+    grid-column: 3 / 9;
+}
