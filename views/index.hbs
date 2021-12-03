@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
 </head>
 
-<body>
+<body onload="fetchRuns()">
 
-    <form id='form' action="index.js" method="post" style="margin: 30px;">
+    <form id='form' method="post" style="margin: 30px;">
 
         <!-- https://www.freecodecamp.org/news/form-validation-with-html5-and-javascript/ -->
 
@@ -24,16 +25,17 @@
         </label>
         <label>
             <!-- <span>Race Date</span> -->
-            <input id="date" type="date" />
+            <input id="runDate" type="date" />
         </label>
         <label>
             <span> </span>
-            <button>Add Race</button>
+            <button>Add run</button>
+            
         </label>
-        <label>
+        {{!-- <label>
             <span> </span>
             <button>Change Race</button>
-        </label>
+        </label> --}}
 
 
     </form>
@@ -41,8 +43,9 @@
 
     </div>
 
-    <script type="javascript" src=""></script>
+ 
+ 
 
 </body>
-
+<script src="js/main.js"></script>  
 </html>
