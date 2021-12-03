@@ -1,3 +1,9 @@
+/*
+
+STUDY THIS FOR DISAPPEARING MENU
+
+https://stackoverflow.com/questions/64800391/how-to-make-navigation-menu-disappear-when-clicking-anywhere-on-the-screen-with */
+
 html,
 body {
     padding: 0;
@@ -80,7 +86,7 @@ nav .links li:hover a {
 }
 
 section:nth-child(odd) {
-    background: lightgrey;
+    background: rgba(0, 0, 0, .8);
 }
 
 #nav-toggle {
