@@ -5,56 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{!-- <link rel="stylesheet" href="css/home.css">
+    {{!--
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/content.css">
-    <link rel="stylesheet" href="css/header.css"> --}}
+    <link rel="stylesheet" href="css/content.css"> --}}
+    <link rel="stylesheet" href="css/datarecord.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    
-    <title>Document</title>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <link rel="stylesheet" href="css/datarecord.css">
+
+
+
+
+    <title>Bolt App</title>
 </head>
 
-<body onload="fetchRuns()">
-    {{!-- <div class='wrapper'>
-        <div class='header'>
-            {{>header}}
-        </div>
+<body>
 
-        {{!TODO-- Content will be replaced by some graphs on the runs and the median stuff --}}
-        {{!-- <div>
-            {{graph}}
-        </div> --}}
-        {{!-- <div class='content' id='content'>
-            
-            {{>content}}
-        </div> --}}
-        {{!TODO:-- We will add form to get details about runs...someone can work on this on --}}
-        {{!-- <div>
-            {{>run_form}}
-        </div> --}}
+    {{>header}}
 
-        {{!-- <div class='footer' id='footer'>
-            {{>footer}}
-        </div>
-        
+    <section id="home" class="section1"><img src="img/runners.jpeg" alt=""></section>
+    {{!-- <section id="about" class="section2">About</section> --}}
+    <section id="work" class="section3">{{>graph}}</section>
+    <section id="projects" class="section4">{{>datarecord}}</section>
+    {{!-- <section id="contact" class="section5 ">Contact</section> --}}
 
-
-
-    </div> --}}
- {{!-- --}} 
-{{>header}}
-
-   <section id="home"class="section1">Home</section>
-    <section id="about"class="section2">About</section>
-    <section id="work"class="section3">{{>graph}}</section>
-    <section id="projects"class="section4">{{>datarecord}}</section>
-    <section id="contact"class="section5 ">Contact</section>
-
-
-<script src="js/chart.js"></script>
-<script src="js/datarecord.js"></script> 
+    <script type='module' src="js/data.js"></script>
+    <script type="module" src="js/main.js"></script>
 
 </body>
 

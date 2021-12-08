@@ -1,31 +1,49 @@
-<form id='form' method="post" style="margin: 30px;">
+<table>
+        <tr>
+            <td>
+                <form id="raceform" autocomplete="off">
+                    <div>
+                        <label for="raceDate">Race Date</label>
+                        <input type="date" name="raceDate" id="raceDate" required>
+                    </div>
+                    <div>
+                        <label for="racelocation">Race Location</label>
+                        <input type="text" name="racelocation" id="raceLocation" required>
+                    </div>
+                    <div>
+                        <label for="racetype">Race Type</label>
+                        <select id="raceType" name="raceType" required>
+                            <option value="100">100 Meters</option>
+                            <option value="200">200 Meters</option>
+                          </select>
+                    </div>
 
-    <!-- https://www.freecodecamp.org/news/form-validation-with-html5-and-javascript/ -->
+                    <div>
+                        <label for="time">Time</label>
+                        <input type="number" name="time" id="raceTime" required>
+                    </div>
 
-    <label>
-        <!-- <span>Race type:</span> -->
-        <input id="runType" type="number" value="200" required />
-    </label>
-    <label>
-        <!-- <span>Time used:</span> -->
-        <input id="runTime" type="number" value="" required />
-    </label>
-    <label>
-        <!-- <span>Race Date</span> -->
-        <input id="runDate" type="date" />
-    </label>
-    <label>
-        <span> </span>
-        <button>Add run</button>
+                    <div class="form_action--button">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
 
-    </label>
-    {{!-- <label>
-        <span> </span>
-        <button>Change Race</button>
-    </label> --}}
+                <td>
+                    <table class="list" id="storeList">
+                        <thead>
+                            <tr>
+                                <th>Race Date</th>
+                                <th>Race Location</th>
+                                <th>Race type</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-
-</form>
-<div id='atheleterecord'>
-
-</div>
+                        </tbody>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>

@@ -1,27 +1,20 @@
-[
-  {
-    "runType": 200,
-    "runTime": 1,
-    "runDate": 978307200000
-  },
-  {
-    "runType": 200,
-    "runTime": 1,
-    "runDate": 978307200000
-  },
-  {
-    "runType": 200,
-    "runTime": 1,
-    "runDate": 978307200000
-  },
-  {
-    "runType": 100,
-    "runTime": 2,
-    "runDate": 946684800000
-  },
-  {
-    "runType": 100,
-    "runTime": 3,
-    "runDate": 946684800000
-  }
+[{
+        "raceDate": 1612137600000,
+        "raceLocation": "New York",
+        "raceType": 200,
+        "raceTime": 22
+    },
+    {
+        "raceDate": 1609632000000,
+        "raceLocation": "kiglai",
+        "raceType": 200,
+        "raceTime": 11
+    },
+    {
+        "raceDate": 1609459200000,
+        "raceLocation": "Mombasa",
+        "raceType": 100,
+        "raceTime": 12
+    }
+
 ]

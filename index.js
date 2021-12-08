@@ -14,7 +14,7 @@ const fileName = 'runs.json';
 // Load data from file
 let rawData = readFileSync(fileName);
 let data = JSON.parse(rawData);
-console.log("data:", data)
+
 
 app.set('views', 'views');
 app.set('view engine', 'hbs');
@@ -28,15 +28,14 @@ hbs.registerPartials("views/partials"), err => {
 
 app.get('/', (request, response) => response.render('home'))
 
-app.get('/runs', (request, response) => {
-    console.log('get runs is working just fine...')
+app.get('/races', (request, response) => {
     data.sort((a, b) => (a.runDate > b.runDate) ? 1 : -1);
     response.send(data);
 
 });
 
-app.post('/runs', jsonParser, (request, response) => {
-    console.log("Iam posting...")
+app.post('/races', jsonParser, (request, response) => {
+
     data.push(request.body);
     writeFileSync(fileName, JSON.stringify(data, null, 2));
     response.end();
