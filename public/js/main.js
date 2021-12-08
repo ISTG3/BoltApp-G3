@@ -22,7 +22,7 @@ export async function fetchRaces() {
     }
     const response = await fetch(url, options);
     const races = await response.json();
-    nextId = races.length()
+    nextId = races.length;
     console.log(nextId);
     populateraces(races);
     graphData(races)
